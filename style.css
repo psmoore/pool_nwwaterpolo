@@ -115,3 +115,4 @@ footer .disc { border-top: 1px solid #333; margin-top: 12px; padding-top: 12px; 
   ul.sess .t { min-width: 92px; }
   footer { padding: 16px; }
 }
+ul.sess .ln { white-space: nowrap; }
