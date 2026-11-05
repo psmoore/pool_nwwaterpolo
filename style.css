@@ -1,0 +1,117 @@
+/* Northwest Water Polo Club, unofficial preview. In the look of northwestwaterpoloclub.com (SportsEngine): a black page
+   behind a dark forest, a narrow white content column, Titillium Web headings, black buttons, club yellow. */
+:root { --yellow: #f2c811; --gold: #c9a40a; --ink: #23282b; --text: #555; --line: #e6e4e4; --black: #000; --dark: #1b1d1f; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: #000; color: var(--text); font: 16px/1.6 Lato, system-ui, sans-serif; }
+a { color: #1b5fa8; }
+h1, h2, h3, h4, .nav a, .btn { font-family: "Titillium Web", system-ui, sans-serif; }
+.forest { position: fixed; inset: 0; z-index: -1; background:
+  linear-gradient(180deg, #2a2d2f 0%, #121314 55%, #000 100%); }
+.forest::after { content: ""; position: absolute; inset: 0; opacity: .55; background:
+  repeating-linear-gradient(90deg, transparent 0 38px, rgba(0,0,0,.35) 38px 41px),
+  radial-gradient(ellipse at 50% 120%, #000 30%, transparent 70%); }
+.preview-note { background: var(--yellow); color: #111; font-size: 13px; padding: 7px 14px; text-align: center; }
+.preview-note a { color: #111; }
+.se-bar { background: #2b2e31; color: #ddd; font: 600 13px "Titillium Web", sans-serif; letter-spacing: .02em; padding: 6px 16px;
+  display: flex; justify-content: space-between; }
+.se-bar a { color: #ddd; text-decoration: none; }
+.top { background: rgba(0,0,0,.92); border-bottom: 1px solid #222; }
+.top .in { max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 10px; padding: 6px 12px; }
+.ball { flex: none; width: 38px; height: 38px; }
+.nav { display: flex; flex-wrap: wrap; gap: 0; align-items: stretch; }
+.nav > a, .nav .dd > button { color: #fff; text-decoration: none; padding: 10px 11px; font-size: 14.5px; background: none; border: 0;
+  border-right: 1px solid #222; cursor: pointer; font-family: "Titillium Web", sans-serif; }
+.nav > a.here, .nav .dd.here > button { background: #2f3336; }
+.nav > a:hover, .nav .dd > button:hover { background: #2f3336; }
+.dd { position: relative; }
+.dd .panel { display: none; position: absolute; top: 100%; left: 0; background: #fff; min-width: 220px; z-index: 20; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.dd:hover .panel, .dd:focus-within .panel { display: block; }
+.dd .panel a { display: block; padding: 8px 14px; color: #222; text-decoration: none; font: 15px "Titillium Web", sans-serif; border-bottom: 1px solid #eee; }
+.dd .panel a:hover, .dd .panel a.here { background: #f4f1e2; }
+.sub { background: var(--line); }
+.sub .in { max-width: 815px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 2px 14px; padding: 6px 14px; font: 13.5px "Titillium Web", sans-serif; }
+.sub .in b { color: #888; font-weight: 600; text-transform: uppercase; margin-right: 6px; }
+.sub a { color: #222; text-decoration: none; } .sub a.here { font-weight: 700; text-decoration: underline; }
+.mnav { display: none; margin-left: auto; }
+.mnav summary { color: #fff; list-style: none; cursor: pointer; font: 700 14px "Titillium Web", sans-serif; padding: 8px; border: 1px solid #444; }
+.mnav summary::-webkit-details-marker { display: none; }
+.mnav .mpanel { position: absolute; left: 0; right: 0; background: #fff; z-index: 30; padding: 8px 16px 16px; box-shadow: 0 8px 20px rgba(0,0,0,.4); }
+.mnav h5 { margin: 12px 0 4px; font: 700 12px "Titillium Web", sans-serif; text-transform: uppercase; color: #888; }
+.mnav a { display: block; padding: 5px 0; color: #111; text-decoration: none; font: 16px "Titillium Web", sans-serif; }
+.col { max-width: 815px; margin: 0 auto; background: #fff; }
+.banner { background: #111 linear-gradient(180deg, #1d1f21, #0d0e0f); display: flex; align-items: center; gap: 22px; padding: 18px 26px; overflow: hidden; position: relative; }
+.banner .ball { width: 150px; height: 150px; }
+.banner .wm b { display: block; font: 700 64px/1 "Arvo", Rockwell, serif; color: #fff; letter-spacing: .5px; }
+.banner .wm span { display: block; font: 400 30px/1.2 "Arvo", Rockwell, serif; color: var(--yellow); }
+.banner .trees { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; opacity: .55; }
+main { padding: 6px 30px 30px; }
+h1.pt { font: 600 26px "Titillium Web", sans-serif; color: var(--ink); margin: 0 -30px 18px; padding: 12px 30px; border-bottom: 1px solid #ddd; }
+h2 { font: 700 21px/1.25 "Titillium Web", sans-serif; text-transform: uppercase; color: #000; margin: 26px 0 10px; }
+h3 { font: 700 18px "Titillium Web", sans-serif; color: #000; margin: 18px 0 6px; }
+h4 { margin: 0; }
+p { margin: 0 0 12px; }
+.small { font-size: 14px; } .muted { color: #888; }
+.two { display: grid; grid-template-columns: 1.6fr 1fr; gap: 26px; }
+.btn { display: inline-block; background: #000; color: #fff; text-decoration: none; font-weight: 700; padding: 11px 18px; text-transform: uppercase;
+  font-size: 14px; border: 0; cursor: pointer; text-align: center; }
+.btn::after { content: " ➔"; color: var(--yellow); }
+.btn.y { background: var(--yellow); color: #000; } .btn.y::after { color: #000; }
+.side .btn { display: block; margin: 10px 0; }
+.live-tag { display: inline-block; vertical-align: middle; margin-left: 6px; background: #e8f6ec; color: #1f7a3c; font: 700 11px/1 "Titillium Web", sans-serif;
+  text-transform: uppercase; letter-spacing: .06em; padding: 4px 6px 3px; border-radius: 3px; }
+.live-tag::before { content: "●"; margin-right: 4px; font-size: 9px; }
+.follow { background: #111; color: #eee; padding: 20px 22px; margin: 18px 0; border-top: 5px solid var(--yellow); }
+.follow h2 { color: #fff; margin-top: 0; }
+.follow p { color: #ccc; }
+.follow .row { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 8px; }
+.follow select, .follow input { font: 16px Lato, sans-serif; padding: 10px 10px; border: 0; border-radius: 0; min-width: 0; }
+.follow select { flex: 1 1 200px; } .follow input { flex: 2 1 220px; }
+.follow .msg { min-height: 1.4em; color: var(--yellow); font-size: 14px; margin: 4px 0; }
+.cal-links { font-size: 14px; display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: center; }
+.cal-links span { color: #aaa; } .cal-links a { color: var(--yellow); }
+.teams { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; margin: 12px 0; }
+.team { display: block; border: 1px solid #ddd; border-top: 4px solid var(--c, var(--yellow)); padding: 12px 14px; text-decoration: none; color: var(--text); background: #fafafa; }
+.team b { display: block; color: #000; font: 700 17px "Titillium Web", sans-serif; }
+.team .when { margin: 6px 0 0; padding: 0; list-style: none; font-size: 14px; }
+.team .go { display: block; margin-top: 8px; font: 700 13px "Titillium Web", sans-serif; text-transform: uppercase; color: #000; }
+ul.when { list-style: none; padding: 0; margin: 4px 0 8px; } ul.when li { padding: 2px 0; }
+ul.when.past { opacity: .75; }
+.week .day { border-top: 1px solid #e5e5e5; padding: 8px 0; display: grid; grid-template-columns: 150px 1fr; gap: 10px; }
+.week .day h4 { font: 700 15px "Titillium Web", sans-serif; color: #000; }
+.week .day.is-today h4 { color: #8a6d00; }
+ul.sess { list-style: none; padding: 0; margin: 0; } ul.sess li { padding: 1px 0; }
+ul.sess .t { display: inline-block; min-width: 124px; color: #000; font-variant-numeric: tabular-nums; }
+ul.sess .where { color: #555; } ul.sess .ln { color: #888; font-size: 13px; }
+ul.sess li.now { background: #fff7cf; } ul.sess li.past { color: #aaa; }
+.pill { background: var(--yellow); color: #000; font: 700 11px "Titillium Web"; padding: 1px 6px; border-radius: 8px; }
+.none { margin: 0; }
+.frame { border: 1px solid #ddd; margin: 10px 0 0; } .frame iframe { display: block; width: 100%; border: 0; }
+.credit { text-align: right; font-size: 12px; margin: 4px 0 0; color: #888; }
+.quote { margin: 12px 0; padding: 10px 14px; background: #f6f6f4; border-left: 4px solid #bbb; font-size: 14.5px; }
+.quote .qh { display: block; font: 700 12px "Titillium Web", sans-serif; text-transform: uppercase; color: #888; margin-bottom: 4px; letter-spacing: .03em; }
+.quote p { margin: 0 0 4px; }
+.trip { border: 2px solid #000; padding: 16px 18px; margin: 18px 0; background: linear-gradient(90deg, #fffbe6, #fff); }
+.trip h2 { margin-top: 0; }
+.trip .tag { display: inline-block; background: #000; color: var(--yellow); font: 700 12px "Titillium Web", sans-serif; text-transform: uppercase; padding: 2px 8px; margin-bottom: 6px; }
+.ba { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ba > div { border: 1px solid #ddd; padding: 12px 14px; } .ba .a { border-color: #000; background: #fffdf2; }
+.ba h3 { margin-top: 0; } .ba ul { padding-left: 18px; margin: 0; } .ba li { margin: 4px 0; }
+.price { font: 700 20px "Titillium Web", sans-serif; color: #000; }
+.facts { list-style: none; padding: 0; margin: 8px 0; } .facts li { padding: 4px 0; border-bottom: 1px solid #eee; }
+.pool { border: 1px solid #ddd; padding: 14px 16px; margin: 12px 0; }
+.pool h3 { margin-top: 0; }
+footer { max-width: 815px; margin: 0 auto 30px; background: #111; color: #aaa; padding: 18px 30px; font-size: 14px; }
+footer a { color: var(--yellow); }
+footer .disc { border-top: 1px solid #333; margin-top: 12px; padding-top: 12px; font-size: 13px; }
+@media (max-width: 760px) {
+  .nav { display: none; } .mnav { display: block; } .top .in { position: relative; }
+  .sub { display: none; }
+  .banner { padding: 14px; gap: 12px; } .banner .ball { width: 74px; height: 74px; }
+  .banner .wm b { font-size: 34px; } .banner .wm span { font-size: 18px; }
+  main { padding: 4px 16px 22px; } h1.pt { margin: 0 -16px 14px; padding: 10px 16px; font-size: 22px; }
+  .two, .ba { grid-template-columns: 1fr; }
+  .week .day { grid-template-columns: 1fr; gap: 2px; }
+  ul.sess .t { min-width: 92px; }
+  footer { padding: 16px; }
+}
